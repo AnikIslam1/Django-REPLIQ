@@ -1,10 +1,9 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Company
-from .models import Employee
-from .models import Device
-from .models import Subscription
+from .models import Company, Employee, Device, Subscription
+
+
 #company account registration
 class CompanyAccount(admin.ModelAdmin):
     list_display = ('pk','company_name','contract_status')
