@@ -50,9 +50,13 @@ Django app to track corporate assets.
  
 ##For RestAPI 
   -Extra file created in the application as named serializer and urls.
+  
   -serializer.py ModelSerializer imported for rest serialization according to the models.py
+  
   -Under the application urls.py rest view urls added  with general user primary key default.(company/<int:pk>)
+  
   -Under the application urls.py rest view for subscription status urls has been added as 'company/<int:pk>/status'
+  
   -In view.py some queryset added for viewing data. 
    But in some way we could restict the user to see other users data by taking primary key for that user by manipulating the query.
  
