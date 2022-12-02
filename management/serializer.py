@@ -1,6 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 from .models import Company,Employee,Device,Subscription
-
+#For API Json/Html serializer creation for Company ,Employee,Device & Subscription
 class CompanySerializer(ModelSerializer):
     class Meta:
         model = Company

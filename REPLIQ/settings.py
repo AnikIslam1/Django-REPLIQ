@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #rest framework and the Application added for the project
     'rest_framework',
     'management.apps.ManagementConfig',
 ]
