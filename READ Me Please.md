@@ -2,11 +2,11 @@
 Django app to track corporate assets.
 
 ##Project Setup
-  -Project name set to REPLIQ.
-  -Application name set to management.
-  -setting.py in REPLIQ added the application and rest_framework.
-  -urls.py added admin panel name and title.
-  -In urls.py added application API path for rest framework view.
+-Project name set to REPLIQ.
+-Application name set to management.
+-setting.py in REPLIQ added the application and rest_framework.
+-urls.py added admin panel name and title.
+-In urls.py added application API path for rest framework view.
   
 ##Supeadmin and user
   -Superuser considered as the developer company.
