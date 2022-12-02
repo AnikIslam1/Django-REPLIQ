@@ -4,7 +4,7 @@ from django.db import models
 from django.contrib.auth.models import User
 #Company model creation using auth.models usre or company admin assign from superadmin. 
 class Company(models.Model):
-  company_id = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+  company_id = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
   company_name = models.CharField(max_length=50)
   Contract = (('OnGoing','OnGoing'),('Expired','Expired'))
   contract_status = models.CharField(max_length=50, choices=Contract)
@@ -12,14 +12,14 @@ class Company(models.Model):
     return self.company_name
 #Employee model creation using Company models foreignKey
 class Employee(models.Model):
-    employee_id = models.ForeignKey(Company, on_delete=models.CASCADE, null=True, blank=True)
+    employee_id = models.ForeignKey(Company, on_delete=models.CASCADE)
     employee_name = models.CharField(max_length=50)
     def __str__(self):
         return self.employee_name   
 
 #Products or devices model creation
 class Device(models.Model):
-    device_id = models.ForeignKey(Company, on_delete=models.CASCADE, null=True, blank=True)
+    device_id = models.ForeignKey(Company, on_delete=models.CASCADE)
     device_name = models.CharField(max_length=50)
     def __str__(self):
         return self.device_name   
